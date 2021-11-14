@@ -1,6 +1,8 @@
 package com.sofka.Dictionary;
 
 import javax.swing.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Options {
     private File file;
@@ -24,7 +26,18 @@ public class Options {
 
     public  void getAllTranslations()
     {
+        file = new File();
+        Map<String, String> words;
 
+        words = file.readFile();
+        String completeList = "";
+
+        for (Map.Entry<String, String> e : words.entrySet())
+        {
+            completeList = completeList + e.getKey() + " = " + e.getValue() + "\n";
+        }
+    
+        JOptionPane.showMessageDialog(null, completeList);
     }
 
     public void getTranslation()

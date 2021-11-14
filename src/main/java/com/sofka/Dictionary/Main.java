@@ -1,14 +1,13 @@
 package com.sofka.Dictionary;
 
 import javax.swing.*;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 public class Main {
+    private static String path;
+
     public static void main(String[] args) {
         int option = 0;
-        InputStreamReader in = new InputStreamReader(System.in);
-        BufferedReader reader = new BufferedReader(in);
+        path = "spanish_english.txt";
 
         do
         {
@@ -19,7 +18,7 @@ public class Main {
                     "3. Consultar traduccion de una palabra en español"));
             switch (option)
             {
-                case 1 : 
+                case 1 :
                     break;
                 case 2 :
                     break;

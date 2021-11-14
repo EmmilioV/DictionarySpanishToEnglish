@@ -14,9 +14,9 @@ public class Main {
         {
             option = Integer.parseInt(JOptionPane.showInputDialog("    MENU    \n" +
                     "Digite el numero segun la accion que desee realizar: \n" +
-                    "1. Registrar una palabra en español con su traduccion al ingles \n" +
+                    "1. Registrar una palabra en espanol con su traduccion al ingles \n" +
                     "2. Consultar todo el diccionario \n" +
-                    "3. Consultar traduccion de una palabra en español"));
+                    "3. Consultar traduccion de una palabra en espanol"));
             switch (option)
             {
                 case 1 :
@@ -26,6 +26,7 @@ public class Main {
                     options.getAllTranslations();
                     break;
                 case  3 :
+                    options.getTranslation();
                     break;
                 default :
                     option = 0;

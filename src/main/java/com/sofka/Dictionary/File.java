@@ -29,7 +29,11 @@ public class File {
                 dictionary.put(words[0], words[1]);
                 line = reader.readLine();
             }
+
             dictionary.keySet().stream().sorted((x,y) -> x.compareTo(y));
+
+            reader.close();
+            fileReader.close();
         }
         catch (Exception e)
         {
@@ -42,12 +46,13 @@ public class File {
     public boolean writeFile(String spanishWord, String englishWord)
     {
         try {
-            FileWriter fileWriter = new FileWriter(this.path);
-            dictionary = new HashMap<>();
+            FileWriter fileWriter = new FileWriter(this.path, true);
+            PrintWriter writer = new PrintWriter(fileWriter);
 
-            fileWriter.write(spanishWord + "=" + englishWord);
+            writer.println(spanishWord.toLowerCase() + "=" + englishWord.toLowerCase());
 
-            dictionary.keySet().stream().sorted((x,y) -> x.compareTo(y));
+            writer.close();
+            fileWriter.close();
 
             return true;
         }

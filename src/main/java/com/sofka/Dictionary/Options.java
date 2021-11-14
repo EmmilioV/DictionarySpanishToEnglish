@@ -13,7 +13,7 @@ public class Options {
         String englishWord;
 
         spanishWord =  JOptionPane.showInputDialog("Ingrese la palabra en español que desea registrar");
-        englishWord =  JOptionPane.showInputDialog("Ingrese la palabra en español que desea registrar");
+        englishWord =  JOptionPane.showInputDialog("Ingrese la palabra en ingles");
 
         if(file.writeFile(spanishWord, englishWord))
             JOptionPane.showMessageDialog(null, "Palabra almacenada con éxito");
